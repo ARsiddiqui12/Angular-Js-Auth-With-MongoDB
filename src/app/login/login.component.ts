@@ -1,0 +1,55 @@
+import { Component, OnInit } from '@angular/core';
+
+import { FormGroup, FormControl } from '@angular/forms';
+
+import { AuthService } from '../auth.service';
+
+import { Router } from '@angular/router';
+
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
+})
+export class LoginComponent implements OnInit{
+
+  userName = '';
+  password = '';
+  formData : any;
+  loginError=false;
+
+  constructor(private authService : AuthService, private router : Router) { }
+
+  ngOnInit() {
+    this.formData = new FormGroup({
+       userName: new FormControl("admin"),
+       password: new FormControl("admin"),
+    });
+ }  
+
+ onClickSubmit(data: any) {
+  this.userName = data.userName;
+  this.password = data.password;
+
+ 
+
+  this.authService.login(this.userName, this.password)
+     .subscribe( resp => { 
+        
+        var isLoggedIn = localStorage.getItem('isUserLoggedIn');
+
+        if(!isLoggedIn)
+        {
+          this.loginError=true;
+          
+        }
+        else
+        {
+          this.router.navigate(['/dashboard']); 
+        }
+       
+  });
+}
+
+}

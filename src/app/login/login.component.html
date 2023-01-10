@@ -1,0 +1,33 @@
+
+<div class="container">
+   
+
+   <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+
+        
+         
+        <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" 
+                                 class="form-signin margin-top-cls">
+
+                                 <div class="alert alert-danger" *ngIf="loginError">Invalid Username or Password!</div>
+
+           <h2 class="heading-center">Sign In</h2>
+
+              <label for="inputEmail" class="">Username</label>
+                    <input type="text" id="username" class="form-control input-sm" 
+                                 formControlName="userName" placeholder="Username" required autofocus>
+              <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control input-sm" 
+                                 formControlName="password" placeholder="Password" required>
+                                 <br />
+                 <button class="btn btn-primary float-cls" type="submit">Sign in</button>
+                           
+        </form>
+      </div>
+
+   </div>
+
+
+ </div>
