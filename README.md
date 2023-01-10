@@ -1,8 +1,8 @@
-AngularJs Auth Login With MongoDB
+AngularJs Auth Login With MongoDB<br /><br />
 
-Step 1. Create a database in MongoDB
-Step 2. Install MongoDB for VS Code by clicking the link https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode
-Step 3. Connect your MongoDB Database with Visual Code.
+Step 1. Create a database in MongoDB<br />
+Step 2. Install MongoDB for VS Code by clicking the link https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode<br />
+Step 3. Connect your MongoDB Database with Visual Code.<br />
 Step 4. gh repo clone ARsiddiqui12/Angular-Js-Auth-With-MongoDB
 Step 5. run this command "npm install"
 Step 6. cd backend (Must Update MongoDB Connection String in Server.js File)
